@@ -16,7 +16,7 @@ const Coin = () => {
         }).catch((error) => {
             console.log(error)
         })
-    },[])
+    },[url])
     return (
         <div>
             <div className="coin-container">
