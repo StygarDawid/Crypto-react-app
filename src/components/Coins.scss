@@ -49,3 +49,26 @@
     display: none;
   }
 }
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 30%;
+  border: 4rem solid rgba(99,71,108,0.5);
+  transform: translate(-50%, -50%);
+  animation: rotate-center 15s linear infinite forwards;
+  z-index: -100;
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

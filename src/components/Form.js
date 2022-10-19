@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import './Form.scss'
 
-const FORM_ENDPOINT = "";
 
 const ContactForm = () => {
+    const FORM_ENDPOINT = "";
     const [submitted, setSubmitted] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,6 +28,7 @@ const ContactForm = () => {
             method="POST"
             target="_blank"
         >
+            <h3 className='form-title'>Contact U$ !!</h3>
             <div>
                 <input type="text" placeholder="Your name" name="name" required />
             </div>
