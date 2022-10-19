@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaCoins} from "react-icons/fa";
+import {FaSearchDollar} from "react-icons/fa";
 import './Navbar.scss'
 import {Link} from "react-router-dom";
 
@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <Link to='/'>
             <div className='navbar'>
-                <FaCoins className='icon' />
+                <FaSearchDollar className='icon' />
                 <h1> Crypto <span className='purple'>Look</span></h1>
             </div>
         </Link>
