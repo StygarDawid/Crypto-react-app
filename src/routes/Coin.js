@@ -18,7 +18,7 @@ const Coin = () => {
         })
     },[url])
     return (
-        <section>
+        <main>
             <div className="coin-container">
                 <header className="content">
                     <h1>{coin.name}</h1>
@@ -93,7 +93,7 @@ const Coin = () => {
                     </section>
                 </div>
             </div>
-        </section>
+        </main>
     )
 }
 
