@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link to='/'>
             <header className='navbar'>
                 <FaSearchDollar className='icon' />
-                <h1> Crypto <span className='main-color'>Look</span></h1>
+                <h2> Crypto <span className='main-color'>Look</span></h2>
             </header>
         </Link>
     )
