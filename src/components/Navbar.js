@@ -6,10 +6,10 @@ import {Link} from "react-router-dom";
 const Navbar = () => {
     return (
         <Link to='/'>
-            <div className='navbar'>
+            <header className='navbar'>
                 <FaSearchDollar className='icon' />
                 <h1> Crypto <span className='main-color'>Look</span></h1>
-            </div>
+            </header>
         </Link>
     )
 };

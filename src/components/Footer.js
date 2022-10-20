@@ -5,7 +5,7 @@ import {FaInstagram, FaTwitter, FaFacebook} from "react-icons/fa";
 
 function Footer(){
     return (
-        <section className='footer'>
+        <footer className='footer'>
             <div className='footer-left'>
                 <div className='footer-left-links'>
                     <a href='https://www.instagram.com/'><FaInstagram/></a>
@@ -15,7 +15,7 @@ function Footer(){
                 <p>© CryptoLook, 2022. All rights reserved.</p>
             </div>
             <Form/>
-        </section>
+        </footer>
     )
 }
 
