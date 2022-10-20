@@ -1,3 +1,57 @@
-.form-title {
-  color: rgba(99,71,108,1);
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: .2rem;
+
+  &-title {
+    color: rgba(99,71,108,1);
+    margin: 0 auto;
+  }
+
+  &-input {
+    font-size: .9rem;
+    text-decoration: none;
+    outline: none;
+    padding: .2rem 0;
+    border-radius: .1rem;
+    border: 2px solid #7f7f83;
+
+    &:focus {
+      border: 2px solid rgba(99,71,108,1);
+    }
+  }
+
+  &-textarea {
+    font-size: 1rem;
+    text-decoration: none;
+    padding: .2rem 0;
+    border: 2px solid #7f7f83;
+
+    &:focus {
+      outline: none;
+      border: 2px solid rgba(99,71,108,1);
+    }
+  }
+
+  &-button {
+    color: white;
+    background-color: rgba(99,71,108,1);
+    padding: 4px 10px;
+    border: 1px solid rgba(99,71,108,0.6);
+    border-radius: .4rem;
+    margin-top: 4px;
+    width: 60%;
+    align-self: center;
+
+    &:hover {
+      background-color: rgba(99,71,108,0.5);
+    }
+  }
+}
+
+.submitted-message {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1rem;
 }

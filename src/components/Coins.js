@@ -6,8 +6,7 @@ import Coin from "../routes/Coin";
 
 const Coins = (props) => {
     return (
-        <div className='container'>
-            <div>
+        <main className='container'>
                 <div className='heading'>
                     <p>#</p>
                     <p className='coin-name'>Coin</p>
@@ -24,9 +23,7 @@ const Coins = (props) => {
                         </Link>
                     )
                 })}
-
-            </div>
-        </div>
+        </main>
     );
 }
 

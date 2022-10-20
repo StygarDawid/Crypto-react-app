@@ -18,16 +18,16 @@ const Coin = () => {
         })
     },[url])
     return (
-        <div>
+        <section>
             <div className="coin-container">
-                <div className="content">
+                <header className="content">
                     <h1>{coin.name}</h1>
-                </div>
+                </header>
                 <div className="content">
                     <div className="rank">
                         <span className='rank-btn'>Rank # {coin.market_cap_rank}</span>
                     </div>
-                    <div className="info">
+                    <section className="info">
                         <div className="coin-heading">
                             {coin.image ? <img src={coin.image.small} alt=""/> : null}
                             <p>{coin.name}</p>
@@ -36,9 +36,9 @@ const Coin = () => {
                         <div className="coin-price">
                             {coin.market_data?.current_price ? <h2>${coin.market_data.current_price.usd.toLocaleString()}</h2> : null}
                         </div>
-                    </div>
+                    </section>
                 </div>
-               <div className="content">
+                <section className="content">
                    <table>
                        <thead>
                            <tr>
@@ -46,8 +46,8 @@ const Coin = () => {
                                <th>24h</th>
                                <th>7d</th>
                                <th>14d</th>
-                               <th>30d</th>
-                               <th>1yr</th>
+                               <th className='hide-mobile-table'>30d</th>
+                               <th className='hide-mobile-table'>1yr</th>
                            </tr>
                        </thead>
                        <tbody>
@@ -56,14 +56,14 @@ const Coin = () => {
                                 <td>{coin.market_data?.price_change_percentage_24h_in_currency ? <p>{coin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(2)}%</p> : null}</td>
                                 <td>{coin.market_data?.price_change_percentage_7d_in_currency ? <p>{coin.market_data.price_change_percentage_7d_in_currency.usd.toFixed(2)}%</p> : null}</td>
                                 <td>{coin.market_data?.price_change_percentage_14d_in_currency ? <p>{coin.market_data.price_change_percentage_14d_in_currency.usd.toFixed(2)}%</p> : null}</td>
-                                <td>{coin.market_data?.price_change_percentage_30d_in_currency ? <p>{coin.market_data.price_change_percentage_30d_in_currency.usd.toFixed(2)}%</p> : null}</td>
-                                <td>{coin.market_data?.price_change_percentage_1y_in_currency ? <p>{coin.market_data.price_change_percentage_1y_in_currency.usd.toFixed(2)}%</p> : null}</td>
+                                <td className='hide-mobile-table'>{coin.market_data?.price_change_percentage_30d_in_currency ? <p>{coin.market_data.price_change_percentage_30d_in_currency.usd.toFixed(2)}%</p> : null}</td>
+                                <td className='hide-mobile-table'>{coin.market_data?.price_change_percentage_1y_in_currency ? <p>{coin.market_data.price_change_percentage_1y_in_currency.usd.toFixed(2)}%</p> : null}</td>
                             </tr>
                        </tbody>
                    </table>
-               </div>
+               </section>
                 <div className="content">
-                    <div className="stats">
+                    <section className="stats">
                         <div className="left">
                             <div className="row">
                                 <h4>24 Hour Low</h4>
@@ -84,16 +84,16 @@ const Coin = () => {
                                 {coin.market_data ? <p>{coin.market_data.circulating_supply}</p> : null}
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
                 <div className="content">
-                    <div className="about">
+                    <section className="about">
                         <h3>About</h3>
                         <p dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(coin.description ? coin.description.en : '')}}></p>
-                    </div>
+                    </section>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

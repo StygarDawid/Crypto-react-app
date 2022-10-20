@@ -37,7 +37,7 @@
       }
 
       p {
-        padding-right: 1rem;
+        padding-left: 1rem;
       }
     }
     table {
@@ -92,5 +92,10 @@
         padding: 3px;
       }
     }
+  }
+}
+@media screen and (max-width: 550px) {
+  .hide-mobile-table {
+    display: none;
   }
 }
